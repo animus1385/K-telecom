@@ -1,0 +1,47 @@
+.footer {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 20px 0;
+
+        @media (max-width: 1024px) {
+            padding: 13px 16px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 15px 30px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__copyrght {
+        grid-column: 2 / 4;
+        font-weight: 400;
+        font-size: $font14;
+        line-height: 150%;
+        color: $colorlightGray;
+
+        @media (max-width: 768px) {
+            grid-column: 1 / -1;
+            order: 2;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    &__elem {
+        width: 30px;
+        height: 30px;
+
+        @media (max-width: 768px) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

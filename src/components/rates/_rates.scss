@@ -1,0 +1,17 @@
+.rates {
+    &__container {
+     padding: 4px 55px 0 41px;
+     @media (max-width: 1024px) { 
+        padding: 4px 16px;
+     }
+    }
+ 
+    &__list-product {
+        overflow: visible;
+        padding: 33px 0 55px;
+    }
+    &__cart {
+        height: auto !important;
+        width: auto !important;
+    }
+}

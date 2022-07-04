@@ -1,0 +1,77 @@
+.hero {
+    &__container {
+        padding-top: 88px;
+        padding-bottom: 89px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 500px 438px;
+        @media (max-width: 1024px) { 
+            grid-template-columns: repeat(2, 1fr);    
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: $font30;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        margin-bottom: 12px;
+        @media (max-width: 600px) {
+            font-size: $font20;
+        }
+    }
+
+    &__list {
+        list-style: disc;
+        font-family: $familyDefult;
+        padding-left: 25px;
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        max-width: 500px;
+        grid-column: 1/2;
+        @media (max-width: 1024px) {      
+            grid-column: 1/-1;   
+            order: 2;
+            max-width: 100%;
+        }
+    }
+
+    &__elem {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+        @media (max-width: 600px) {
+            font-size: $font14;
+        }
+    }
+    &__btn {
+        padding: 12px 62px;
+        background-color: $colorRed;
+        @media (max-width: 768px) {
+           width: 100%;
+        }
+        @media (max-width: 600px) {
+            font-size: $font14;
+        }
+      
+    }
+    &__img {
+        grid-column: 2/-1;
+        transform: translate(-37px, -22px);
+        @media (max-width: 1024px) {      
+            grid-column: 1/-1;   
+            order: 1;
+            transform: none;
+            min-width: 400px;
+            min-height: 300px;
+            margin: 0 auto 10px;
+        }
+        @media (max-width: 600px) {
+            min-width: 280px;
+            min-height: 173px;
+        }
+    }
+}
